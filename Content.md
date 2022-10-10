@@ -26,14 +26,34 @@ This is the type that you give the machine to learn from “the right answers”
 - Self-Driving Car
 - Visual Inspection
 
+### Regression Models
 →**Regression** is a method of Supervised Learning
 
-- Estimating rental prices for houses from a given sample of houses and price pairs
-
-### Regression Models
+- Estimating rental prices for houses from a given sample of houses and price pairs.  
 
 1. **Lineer Regression**:
-   We have _feature_ variable and _target_ variable
+   We have _feature_ ($x^{(i)}$) variable and _target_ ($y^{(i)}$) variable.
+
+   The process looks like the following;  
+   a. **Training Set**  
+   b. **Learning Algorithm**  
+   c. $f_{w,b}(x^{(i)})$: Model that takes feature _x_ as input and returns prediction $\hat{y}^{(i)}$.
+   d. Minimize the Cost Function given below to fit the model as good as possible.
+
+   → How do we build a function with parameters(weights or coefficients) $w$ and $b$ so that $\hat{y}$ is close to the other _(feature, target)_ values?
+
+    * The answer is the **Cost Function**
+
+    $$ J(w,b) = \frac{\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})^2}{2m} $$
+    where _(i)_ is the index for training data and _m_ is the number of training inputs.
+
+    * To find the best values of $w$ and $b$ we have **Gradient Descent Algorithm**
+
+      <ins>Steps of the Gradient Descent</ins>:  
+
+      1. Set your $w$ as follows &rarr; $w - \alpha \frac{d J(w,b)}{d w}$ to step away your starting $w$. Also set your $b$ as follows &rarr; $b - \alpha \frac{d J(w,b)}{d b}$ to step away your starting $b$. Here $\alpha$ is *the learning rate* and the derivative gives which direction the descent step will be taken.  
+
+      2. Choose your learning rate $\alpha$
 
 → **Classification** is another method for Supervised Learning
 
@@ -49,7 +69,7 @@ In this type of data we are not given any answers. We try to find something inte
 
 - Used in Google News
 
-→Clustering is a method of Unsupervised Learning
+→ **Clustering** is a method of Unsupervised Learning
 
 - DNA Clustering
 - Customer Clustering
