@@ -44,7 +44,7 @@ This is the type that you give the machine to learn from “the right answers”
 
     * The answer is the **Cost Function**
 
-    $$ J(w,b) = \frac{\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})^2}{2m} $$
+    $$ J(w,b) = \frac{\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})^2}{2m}
     where _(i)_ is the index for training data and _m_ is the number of training inputs.
 
     * To find the best values of $w$ and $b$ we have **Gradient Descent Algorithm**
