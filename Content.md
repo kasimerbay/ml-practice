@@ -1,3 +1,5 @@
+<ins>**Dedicated to my beloved [Gülçehrem](ahmetkasimerbay.net)**</ins>
+
 - Machine Learning examples,
     - Image recognition,
     - recomendation engines,
@@ -11,7 +13,7 @@
 
 ### What is Machine Learning?
 
-> Field of study that gives computers the ability to learn without axplicitely programmed.
+> Field of study that gives computers the ability to learn without explicitly programmed.
 Arthur Samuel (1959)
 >
 
