@@ -133,14 +133,15 @@ $$\begin{align}
     After z-score normalization, all features will have a mean of 0 and a standard deviation of 1.
 
     To implement z-score normalization, adjust your input values as shown in this formula:
-    $$x^{(i)}_j = \dfrac{x^{(i)}_j - \mu_j}{\sigma_j}$$
-    where $j$ selects a feature or a column in the $\mathbf{X}$ matrix. $µ_j$ is the mean of all the values for feature (j) and $\sigma_j$ is the standard deviation of feature (j).
-    $$
+$$x^{(i)}_j = \dfrac{x^{(i)}_j - \mu_j}{\sigma_j}$$
+    where $j$ selects a feature or a column in the $X$ matrix. $µ_j$ is the mean of all the values for feature (j) and $\sigma_j$ is the standard deviation of feature (j).
+
+$$
     \begin{align}
     \mu_j &= \frac{1}{m} \sum_{i=0}^{m-1} x^{(i)}_j\\
     \sigma^2_j &= \frac{1}{m} \sum_{i=0}^{m-1} (x^{(i)}_j - \mu_j)^2
     \end{align}
-    $$
+$$
 
   >**Implementation Note:** When normalizing the features, it is important
   to store the values used for normalization - the mean value and the standard deviation used for the computations. After learning the parameters
