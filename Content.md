@@ -113,7 +113,7 @@ In regression, vectorization makes your code shorter and also makes it run much 
     where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
     $$\begin{align}
-    \frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}_{j}^{(i)}  \\
+    \frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_{j}  \\
     \frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
     \end{align}$$
 
