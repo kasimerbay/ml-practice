@@ -107,11 +107,13 @@ In regression, vectorization makes your code shorter and also makes it run much 
 
 2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>
 
-$$ \text{repeat until convergence:} \; \lbrace \\ w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; \\ b\ = b - \alpha \frac{\partial J(w,b)}{\partial b} \ \ \\ \rbrace \\ \text{for j = 0..n-1}$$
+$$ \text{repeat until convergence: } \lbrace $$ 
 
-$$\begin{align*} \text{repeat}&\text{ until convergence:} \  \lbrace \newline\; & w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; & \text{for j = 0..n-1}\newline
-&b\ \ = b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
-\end{align*}$$
+$$ w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j}$$
+
+$$ b\ \ = b -  \alpha \frac{\partial J(w,b)}{\partial b} \\ \rbrace$$
+
+$$ \text{for j = 0..n-1} $$
 
 where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
