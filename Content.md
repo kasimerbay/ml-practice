@@ -105,22 +105,20 @@ $$ f_{\vec{w},b}({\vec{x}}) = [w_{1}\ w_{2}\ \cdots\ w_{n}] \cdot [x_{1}\  x_{2}
 1. <ins>**Vectorization**</ins>  
 In regression, vectorization makes your code shorter and also makes it run much more efficient. We vectorize arrays using [Numpy](https://numpy.org/doc/stable/).
 
-2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>
-    $$\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline\;
-    & w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; & \text{for j = 0..n-1}\newline
-    &b\ \ = b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
-    \end{align*}$$
-    where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
+2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>  
 
-    $$\begin{align}
-    \frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j  \\
-    \frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
-    \end{align}$$
+$$\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline\; & w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; & \text{for j = 0..n-1}\newline
+&b\ \ = b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
+\end{align*}$$
+where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
-* m is the number of training examples in the data set
+$$\begin{align}
+\frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j  \\
+\frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
+\end{align}$$
 
-
-*  $f_{\mathbf{\vec{w}},b}(\vec{x}^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target value
+  * m is the number of training examples in the data set  
+  *  $f_{\mathbf{\vec{w}},b}(\vec{x}^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target value
 
 3. <ins>**Feature Scaling**</ins>  
   This enables us to run *Gradient Descent* much faster. In order to achieve scaling, we use some methods such as *diving all entries by the greatest entry*, *mean normalizaiton* and *Z-score normalizaiton*
