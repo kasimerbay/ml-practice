@@ -44,7 +44,7 @@ This is the type that you give the machine to learn from “the right answers”
 
    → How do we build a function with parameters(weights or coefficients) $w$ and $b$ so that $\hat{y}$ is close to the other _(feature, target)_ values?
 
-   * The answer is the **Cost Function**
+    * The answer is the **Cost Function**
 
     $$J(w,b) = \frac{1}{2m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})^2$$  
 
@@ -56,15 +56,15 @@ This is the type that you give the machine to learn from “the right answers”
 
       1. Set your $w$ as follows &rarr; $w - \alpha \frac{d J(w,b)}{d w}$ to step away your starting $w$;
 
-            $$ \frac{\partial J(w,b))}{\partial w} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)}).\hat{x}^{(i)} $$  
-            where $\hat{y}^{(i)} = f_{w,b}(x^{(i)})$
+        $$\frac{\partial J(w,b))}{\partial w} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)}).\hat{x}^{(i)}$$
+        where $\hat{y}^{(i)} = f_{w,b}(x^{(i)})$
 
-            Also set your $b$ as follows &rarr; $b - \alpha \frac{d J(w,b)}{d b}$ to step away your starting $b$.
+        Also set your $b$ as follows &rarr; $b - \alpha \frac{d J(w,b)}{d b}$ to step away your starting $b$.
 
-            $$ \frac{\partial J(w,b))}{\partial b} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})$$  
-            where $\hat{y}^{(i)} = f_{w,b}(x^{(i)})$
+        $$\frac{\partial J(w,b))}{\partial b} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})$$  
+        where $\hat{y}^{(i)} = f_{w,b}(x^{(i)})$
 
-            Here $\alpha$ is *the learning rate* and the derivative gives which direction the descent step will be taken.
+        Here $\alpha$ is *the learning rate* and the derivative gives which direction the descent step will be taken.
 
       2. Choose your learning rate $\alpha$  
 
