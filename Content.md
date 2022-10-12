@@ -112,10 +112,11 @@ $$\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline\; 
 \end{align*}$$
 where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
-$$\begin{align}
-\frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j  \\
-\frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
-\end{align}$$
+$$
+\frac{\partial J(\vec{w},b)}{\partial w_j} = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j
+\\
+\frac{\partial J(\vec{w},b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
+$$
 
   * m is the number of training examples in the data set  
   *  $f_{\mathbf{\vec{w}},b}(\vec{x}^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target value
