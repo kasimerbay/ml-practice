@@ -95,7 +95,7 @@ In this type of data we are not given any answers. We try to find something inte
 # Week 2
 
 ### Lineer Regression with Multiple Features  
-Multiple fetaures implies out feature ,$x^{(i)}$, is a raw vector that is we give feature to our model as a vector; say $\vec{x}_j$, where $\vec{x}_j$ is the $x_{j}$ feature.
+Multiple fetaures implies out feature , $x^{(i)}$, is a raw vector that is we give feature to our model as a vector; say $\vec{x}_j$, where $\vec{x}_{j}$ is the $x_{j}$ feature.
 
 So our models becomes;  
 
@@ -107,16 +107,20 @@ In regression, vectorization makes your code shorter and also makes it run much 
 
 2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>  
 
-$$\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline\;
+$$
+\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline\;
 & w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; & \text{for j = 0..n-1}\newline
 &b\ \ = b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
-\end{align*}$$  
+\end{align*}
+$$  
 where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
-$$\begin{align}
+$$
+\begin{align}
 \frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}_{j}^{(i)}  \\
 \frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
-\end{align}$$
+\end{align}
+$$
 
 * m is the number of training examples in the data set
 
