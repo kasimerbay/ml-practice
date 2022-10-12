@@ -163,4 +163,7 @@ Try to visualize the *learning curve* and detect where the curve converges, or u
 5. <ins>**Choosing a Good Learning Rate**</ins>  
     * With a small enough $\alpha$, $J(\vec{w},b)$ should decrease on every iteration.
 
-    * If $\alpha$ is too small, *Gradient Descent* takes a lot more iteration to converge.
+    * If $\alpha$ is too small, *Gradient Descent* takes a lot more iteration to converge.  
+
+---
+You can reach the Lineer Regression Notebook [here](Lineer Regression Notes/Lineer Regression.ipynb)
