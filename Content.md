@@ -56,12 +56,12 @@ This is the type that you give the machine to learn from “the right answers”
 
       1. Set your $w$ as follows &rarr; $w - \alpha \frac{d J(w,b)}{d w}$ to step away your starting $w$;
 
-        $$\frac{\partial J(w,b))}{\partial w} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)}).\hat{x}^{(i)}$$
+        $$\frac{\partial J(w,b)}{\partial w} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)}).\hat{x}^{(i)}$$
         where $\hat{y}^{(i)} = f_{w,b}(x^{(i)})$
 
         Also set your $b$ as follows &rarr; $b - \alpha \frac{d J(w,b)}{d b}$ to step away your starting $b$.
 
-        $$\frac{\partial J(w,b))}{\partial b} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})$$  
+        $$\frac{\partial J(w,b)}{\partial b} = \frac{1}{m}\sum_{i = 1}^{m}(\hat{y}^{(i)} - y^{(i)})$$  
         where $\hat{y}^{(i)} = f_{w,b}(x^{(i)})$
 
         Here $\alpha$ is *the learning rate* and the derivative gives which direction the descent step will be taken.
@@ -105,18 +105,20 @@ $$ f_{\vec{w},b}({\vec{x}}) = [w_{1}\ w_{2}\ \cdots\ w_{n}] \cdot [x_{1}\  x_{2}
 1. <ins>**Vectorization**</ins>  
 In regression, vectorization makes your code shorter and also makes it run much more efficient. We vectorize arrays using [Numpy](https://numpy.org/doc/stable/).
 
-2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>  
+2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>
+
+$$ \text{repeat until convergence:} \; \lbrace \\ w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; \\ b\ = b - \alpha \frac{\partial J(w,b)}{\partial b} \\ \text{for j = 0..n-1}$$
 
 $$\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline\; & w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j} \; & \text{for j = 0..n-1}\newline
 &b\ \ = b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
 \end{align*}$$
+
 where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
-$$
-\frac{\partial J(\vec{w},b)}{\partial w_j} = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j
-\\
-\frac{\partial J(\vec{w},b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
-$$
+$$\begin{align}
+\frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j  \\
+\frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
+\end{align}$$
 
   * m is the number of training examples in the data set  
   *  $f_{\mathbf{\vec{w}},b}(\vec{x}^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target value
