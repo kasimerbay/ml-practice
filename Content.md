@@ -107,7 +107,7 @@ In regression, vectorization makes your code shorter and also makes it run much 
 
 2. <ins>**Gradient Descent for Multiple Lineer Regression**</ins>
 
-$$ \text{repeat until convergence: } \lbrace $$ 
+$$ \text{repeat until convergence:} \lbrace $$ 
 
 $$ w_j = w_j -  \alpha \frac{\partial J(w,b)}{\partial w_j}$$
 
