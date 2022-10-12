@@ -166,4 +166,5 @@ Try to visualize the *learning curve* and detect where the curve converges, or u
     * If $\alpha$ is too small, *Gradient Descent* takes a lot more iteration to converge.  
 
 ---
-You can reach the Lineer Regression Notebook [here](Lineer Regression Notes/Lineer Regression.ipynb)
+
+You can reach the Lineer Regression Notebook [here](https://github.com/kasimerbay/ml-practice/blob/master/Lineer%20Regression%20Notes/Lineer%20Regression.ipynb)
