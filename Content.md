@@ -95,7 +95,7 @@ In this type of data we are not given any answers. We try to find something inte
 # Week 2
 
 ### Lineer Regression with Multiple Features  
-Multiple fetaures implies out feature $x^{(i)}$ is a raw vector that is we give feature to our model as a vector; say $\vec{x}_{j}$ where $x_{j}$ is the $x_{j}$ feature.
+Multiple fetaures implies out feature $x^{(i)}$ is a raw vector that is we give feature to our model as a vector; say $\vec{x}_{(j)}$ where $x_{j}$ is the $x_{j}$ feature.
 
 So our models becomes;  
 
@@ -118,7 +118,7 @@ In regression, vectorization makes your code shorter and also makes it run much 
   where, n is the number of features, parameters $w_j$,  $b$, are updated simultaneously and where  
 
   $$\begin{align}
-  \frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_j  \\
+  \frac{\partial J(\vec{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})\vec{x}^{(i)}_{j}  \\
   \frac{\partial J(\vec{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
   \end{align}$$
 
