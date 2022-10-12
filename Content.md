@@ -95,7 +95,7 @@ In this type of data we are not given any answers. We try to find something inte
 # Week 2
 
 ### Lineer Regression with Multiple Features  
-Multiple fetaures implies out feature $x^{(i)}$ is a raw vector that is we give feature to our model as a vector; say ${\vec{x}_{j}}$ where $\vec{x}_{j}$ is the $x_{j}$ feature.
+Multiple fetaures implies out feature $x^{(i)}$ is a raw vector that is we give feature to our model as a vector; say $\vec{x}_{j}$ where ${x}_{j}$ is the $x_{j}$ feature.
 
 So our models becomes;  
 
