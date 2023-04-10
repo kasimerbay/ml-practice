@@ -1,4 +1,3 @@
-<ins>**Dedicated to my beloved [Gülçehrem](ahmetkasimerbay.net)**</ins>
 
 - Machine Learning examples,
     - Image recognition,
